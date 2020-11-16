@@ -7,11 +7,12 @@ import Typography from '@material-ui/core/Typography';
 
 import Login from '../../components/login';
 import LoveButton from '../../components/love-button';
+import TopTenChart from '../../components/top-ten-chart';
 
-import { useStyles } from './App.styles';
+import { getStyles } from './App.styles';
 
 const App: React.FC = () => {
-  const classes = useStyles();
+  const classes = getStyles();
 
   return (
     <div className="App">
@@ -22,9 +23,10 @@ const App: React.FC = () => {
         </Toolbar>
       </AppBar>
       <div className={classes.mainContainer}>
-        <Login extraClass={classes.login}></Login>
+        <Login extraClass={classes.login} />
+        <LoveButton extraClass={classes.loveButton} />
+        <TopTenChart extraClass={classes.topTenChart} />
       </div>
-      <LoveButton />
     </div>
   );
 };

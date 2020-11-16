@@ -1,6 +1,6 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
-export const useStyles = makeStyles((theme) => ({
+export const getStyles = makeStyles({
   appContainer: {
     display: 'flex',
     width: '100%',
@@ -21,4 +21,11 @@ export const useStyles = makeStyles((theme) => ({
   login: {
     width: '50%',
   },
-}));
+  loveButton: {
+    marginTop: '2rem',
+  },
+  topTenChart: {
+    marginTop: '3rem',
+    width: '60%',
+  },
+});

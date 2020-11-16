@@ -7,16 +7,11 @@ import CardActions from '@material-ui/core/CardActions';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 
+import { OwnProps, Props } from '../../shared/common.interface';
+
 import { getStyles } from './login.styles';
 
 const classNames = require('classnames');
-
-interface OwnProps {
-  props?: object;
-  extraClass?: string;
-}
-
-type Props = OwnProps;
 
 const Login: FunctionComponent<Props> = (props: OwnProps) => {
   const classes = getStyles();

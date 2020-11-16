@@ -1,19 +1,16 @@
 import React, { FunctionComponent } from 'react';
 
+import { OwnProps, Props } from '../../shared/common.interface';
+
 import { getStyles } from './love-button.styles';
 
-interface OwnProps {
-  props?: object;
-  extraClass?: string;
-}
-
-type Props = OwnProps;
+const classNames = require('classnames');
 
 const LoveButton: FunctionComponent<Props> = (props: OwnProps) => {
   const classes = getStyles();
 
   return (
-    <div className={classes.formLogoContainer}>
+    <div className={classNames(classes.root, props.extraClass)}>
       <img
         alt="logo"
         className={classes.buttonLogo}
