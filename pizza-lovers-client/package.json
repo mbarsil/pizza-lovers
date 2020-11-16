@@ -30,7 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn pretty-quick --staged && yarn lint && yarn test --watchAll=false"
+      "pre-push": "pretty-quick --staged && npm run lint"
     }
   },
   "eslintConfig": {
