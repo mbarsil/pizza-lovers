@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import Login from '../../components/login';
+import LoveButton from '../../components/love-button';
 
 import { useStyles } from './App.styles';
 
@@ -23,6 +24,7 @@ const App: React.FC = () => {
       <div className={classes.mainContainer}>
         <Login extraClass={classes.login}></Login>
       </div>
+      <LoveButton />
     </div>
   );
 };
