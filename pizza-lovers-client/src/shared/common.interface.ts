@@ -4,3 +4,8 @@ export interface OwnProps {
 }
 
 export type Props = OwnProps;
+
+export interface UserCredentials {
+  userName: string;
+  password: string;
+}
