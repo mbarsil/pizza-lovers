@@ -1,21 +1,29 @@
 import React from 'react';
 
-import { Container, Header, Logo, Link } from './App.styled';
-import logo from './logo.svg';
+import { AppBar } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+
+import Login from '../../components/login';
+
+import { useStyles } from './App.styles';
 
 const App: React.FC = () => {
+  const classes = useStyles();
+
   return (
-    <Container className="App">
-      <Header>
-        <Logo src={logo} alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Link href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </Link>
-      </Header>
-    </Container>
+    <div className="App">
+      <AppBar position="static">
+        <Toolbar className={classes.appBar}>
+          <Typography variant="h6">Pizza lovers</Typography>
+          <Button>Login</Button>
+        </Toolbar>
+      </AppBar>
+      <div className={classes.mainContainer}>
+        <Login extraClass={classes.login}></Login>
+      </div>
+    </div>
   );
 };
 
