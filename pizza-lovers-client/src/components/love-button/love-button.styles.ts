@@ -3,6 +3,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const getStyles = makeStyles({
   root: {
     minWidth: 275,
+    height: '16vh',
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
@@ -11,6 +12,9 @@ export const getStyles = makeStyles({
   },
   buttonLogo: {
     height: '128px',
+    '&:hover': {
+      height: '138px',
+    },
   },
   buttonLabel: {
     marginTop: '1rem',
