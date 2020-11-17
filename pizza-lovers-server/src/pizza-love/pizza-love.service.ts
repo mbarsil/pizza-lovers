@@ -12,6 +12,8 @@ export class PizzaLoveService {
   }
 
   updatePizzaLove(userName: string): void {
+    if (!userName) { return; }
+
     this._users = this._users
       .map((userInfo: UserInfo) => {
         if (userInfo.userName === userName) {

@@ -3,11 +3,11 @@ import { UserInfo } from './pizza-love.interface';
 export const USERS: UserInfo[] = [
   {
     userName: 'mario',
-    likes: 1
+    likes: 0
   },
   {
     userName: 'joe',
-    likes: 2
+    likes: 1
   },
   {
     userName: 'mike',
@@ -49,4 +49,4 @@ export const USERS: UserInfo[] = [
     userName: 'manny',
     likes: 12
   },
-];
+].sort((a: UserInfo, b: UserInfo) => (a.likes > b.likes) ? -1 : 1);
