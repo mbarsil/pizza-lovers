@@ -6,11 +6,15 @@ import { getStyles } from './love-button.styles';
 
 const classNames = require('classnames');
 
-const LoveButton: FunctionComponent<Props> = (props: OwnProps) => {
+interface LoveButtonProps extends OwnProps {
+  onClick: (event: any) => void;
+}
+
+const LoveButton: FunctionComponent<LoveButtonProps> = (props: LoveButtonProps) => {
   const classes = getStyles();
 
   return (
-    <div className={classNames(classes.root, props.extraClass)}>
+    <div className={classNames(classes.root, props.extraClass)} onClick={props.onClick}>
       <img
         alt="logo"
         className={classes.buttonLogo}

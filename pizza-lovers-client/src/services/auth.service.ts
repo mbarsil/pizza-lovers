@@ -5,7 +5,8 @@ import { USERS } from './users.mock';
 const CURRENT_USER_KEY = 'currentUser';
 
 export const AuthService = () => {
-  let _currentUser: UserCredentials | undefined;
+  // @ts-ignore
+  let _currentUser: UserCredentials = JSON.parse(sessionStorage.getItem(CURRENT_USER_KEY));
 
   const getCurrentUser = (): UserCredentials | undefined => {
     return _currentUser;
