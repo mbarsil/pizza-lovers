@@ -2,10 +2,6 @@ import { SubscribeMessage, WebSocketGateway, WebSocketServer } from '@nestjs/web
 
 import { PizzaLoveService } from './pizza-love.service';
 
-interface User {
-  userName: string;
-}
-
 const PIZZA_LOVE_CHANNEL = 'pizzaLove';
 
 @WebSocketGateway()
@@ -25,12 +21,13 @@ export class PizzaLoveGateway {
   }
 
   @SubscribeMessage(PIZZA_LOVE_CHANNEL)
-  createNewLike(client: any, payload: User): void {
+  createNewLike(client: any, payload: string): void {
     console.log(`[PAYLOAD] ===> ${payload}`);
     if (payload) {
-      this.pizzaLoveService.updatePizzaLove(payload.userName);
+      this.pizzaLoveService.updatePizzaLove(payload);
     }
 
+    console.log('[PUSHING TO CLIENT]');
     this.server.emit(PIZZA_LOVE_CHANNEL, this.pizzaLoveService.users)
   }
 }
