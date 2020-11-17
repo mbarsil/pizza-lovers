@@ -26,7 +26,10 @@ export class PizzaLoveGateway {
 
   @SubscribeMessage(PIZZA_LOVE_CHANNEL)
   createNewLike(client: any, payload: User): void {
-    this.pizzaLoveService.updatePizzaLove(payload.userName);
+    console.log(`[PAYLOAD] ===> ${payload}`);
+    if (payload) {
+      this.pizzaLoveService.updatePizzaLove(payload.userName);
+    }
 
     this.server.emit(PIZZA_LOVE_CHANNEL, this.pizzaLoveService.users)
   }
