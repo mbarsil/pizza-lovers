@@ -76,7 +76,8 @@ The project has been built following the principles below:
 
 ## Testing
 * The backend main service has been tested considering all the possible scenarios.
-* On the FE, unfortunately, I ran intro quite some trouble when mocking Socket.io for testing the FE components. I did
+* On the FE, unfortunately, I ran intro quite some trouble when mocking Socket.io for testing the FE components. This issue
+has been reported in different platforms like Github or StackOverflow. I did
 run out of time without a viable solution so I decided to deliver the test missing some meaningful tests on the FE side.
 However, my approach would be:
 
