@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-import { OwnProps, Props } from '../../shared/common.interface';
+import { OwnProps } from '../../shared/common.interface';
 
 import { getStyles } from './love-button.styles';
 
