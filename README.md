@@ -98,4 +98,58 @@ Clone the repository and:
 * Inside the ````pizza-lovers-client``` directory, run ```npm i```.
 * Run ```npm start```.
 
+### Test users
+These are the test users to try out the app:
 
+```
+[
+  {
+    userName: 'mario',
+    password: 'mario',
+  },
+  {
+    userName: 'joe',
+    password: 'joe',
+  },
+  {
+    userName: 'mike',
+    password: 'mike',
+  },
+  {
+    userName: 'connor',
+    password: 'connor',
+  },
+  {
+    userName: 'floyd',
+    password: 'floyd',
+  },
+  {
+    userName: 'vasyl',
+    password: 'vasyl',
+  },
+  {
+    userName: 'gennady',
+    password: 'gennady',
+  },
+  {
+    userName: 'riddick',
+    password: 'riddick',
+  },
+  {
+    userName: 'david',
+    password: 'david',
+  },
+  {
+    userName: 'evander',
+    password: 'evander',
+  },
+  {
+    userName: 'roy',
+    password: 'roy',
+  },
+  {
+    userName: 'manny',
+    password: 'manny',
+  },
+];
+```
