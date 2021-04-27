@@ -1,4 +1,4 @@
-# TechnestTestFrontend
+# Pizza lovers - React, React Hooks, Socket.io and Nestjs
 
 ## Acknowledgements
 For this project, the following graphic resources have been used:
